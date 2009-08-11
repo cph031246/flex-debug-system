@@ -85,8 +85,7 @@ package util.debug
 		 * change parent of the canvas
 		 **/
 		public function setParent(parent:Object):void
-		{
-			
+		{			
 			if(m_canvas == null)
 			{
 				m_canvas = new AioViewControlPanel ();			
@@ -94,15 +93,13 @@ package util.debug
 				parent.addChild(m_canvas);
 				m_textArea = new TextArea();			
 				m_textArea.editable = false;			
-				m_canvas.addChild(m_textArea);
-				
+				m_canvas.addChild(m_textArea);				
 			}
 			else
 			{
 				m_canvas.parent.removeChild(m_canvas);
 				parent.addChild(m_canvas);
-			}
-			
+			}			
 			
 			//FIxme it can bug because I'm not sure the canvas will be always
 			//completed just in time
