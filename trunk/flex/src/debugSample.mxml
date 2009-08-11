@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute"
+	width="100%" 
+	height="100%" 
+	creationComplete="onCreationComplete()">
+
+	<mx:Script>
+		<![CDATA[
+			import util.debug.d;
+			import mx.states.AddChild;
+			import mx.containers.Canvas;
+		
+	
+			private function onCreationComplete():void
+			{			
+				//all errors will appears
+				d.bug().setLevel(4); 
+				d.bug()._verbose("Debug initialized",this);				
+				d.bug().sendToView(this);
+				d.bug().setPrefix("My Cool aPp");
+				
+				d.bug()._bug(" if you see that that's because you have put a trace" + 
+						"to point out a bug " + 
+						"* list \n" + 
+						"* list \n" + 
+						"* list \n" +
+						"Lorem ipsum dolor sit amet," +
+						"consectetur adipiscing elit." + 
+						"Etiam volutpat " +
+						"sagittis laoreet.Suspendisse metus lacus, " + 
+						"blandit ac fermentum non, " +
+						"bibendum volutpat nunc. \r" +
+						"<p>Lorem ipsum dolor sit amet," + //note the <p> this is a new paragraph 
+						"consectetur adipiscing elit." +
+						"Etiam volutpat " +
+						"sagittis laoreet.Suspendisse metus lacus, " + 
+						"blandit ac fermentum non, " + 
+						"bibendum volutpat nunc. \r" + 
+						"* list \n" + 
+						"* list \n" +
+						"* list \n" ,this);
+						
+				d.bug().ligne();
+				d.bug().br(4);
+				
+				d.bug()._warning(" pay attention if this trace appears something goes wrong but will not cause " + 
+						"bug " + 
+						"to point out a bug " +						 
+						"* list \n" ,this);
+			
+				d.bug()._trace(	"juste want trace some value or execution scope"	 ,this);
+				d.bug()._trace(	"trace you are bored to see and you need juste\r\n when something" + 
+								"goes wrong"	 ,this);
+				
+							
+				if(d.bug().getViewDebug() != null)
+				{
+					d.bug().getViewDebug().setBugColor("0022FF");
+				}
+				
+				d.bug()._bug(" Now bug color have changed" ,this);
+				
+								
+			}
+		]]>
+	</mx:Script>	
+</mx:Application>
