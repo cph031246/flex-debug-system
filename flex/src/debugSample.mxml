@@ -27,20 +27,28 @@
 			AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 			LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 			OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-			THE SOFTWARE.*/
+			THE SOFTWARE.
+
+
+
+WARNING the class has some bugs, wait for I commit the new version or send me an email for that
+the buffer system doesnt work in that version
+
+
+*/
 			
 			import util.debug.d;
 			import mx.states.AddChild;
 			import mx.containers.Canvas;
 		
-
+			
 			private function onCreationComplete():void
 			{			
 				//all errors will appears
 				d.bug().setLevel(4); 
 				d.bug()._verbose("Debug initialized",this);				
 				d.bug().sendToView(this);
-				d.bug().setPrefix("My Cool aPp");
+				d.bug().setPrefix("neiio");
 				
 				d.bug()._bug(" if you see that that's because you have put a trace" + 
 						"to point out a bug " + 
@@ -71,6 +79,7 @@
 						"to point out a bug " +						 
 						"* list \n" ,this);
 			
+				
 				d.bug()._trace(	"juste want trace some value or execution scope"	 ,this);
 				d.bug()._trace(	"trace you are bored to see and you need juste\r\n when something" + 
 								"goes wrong"	 ,this);
