@@ -37,7 +37,7 @@ the buffer system doesnt work in that version
 
 */
 			
-			import util.debug.d;
+			import util.d;
 			import mx.states.AddChild;
 			import mx.containers.Canvas;
 		
@@ -45,10 +45,10 @@ the buffer system doesnt work in that version
 			private function onCreationComplete():void
 			{			
 				//all errors will appears
-				d.bug().setLevel(4); 
-				d.bug()._verbose("Debug initialized",this);				
+				d.bug().setLevel(4);								
 				d.bug().sendToView(this);
-				d.bug().setPrefix("neiio");
+				d.bug()._verbose("Debug initialized");
+				d.bug().setPrefix("");
 				
 				d.bug()._bug(" if you see that that's because you have put a trace" + 
 						"to point out a bug " + 
@@ -69,7 +69,7 @@ the buffer system doesnt work in that version
 						"bibendum volutpat nunc. \r" + 
 						"* list \n" + 
 						"* list \n" +
-						"* list \n" ,this);
+						"* list \n" );
 						
 				d.bug().ligne();
 				d.bug().br(4);
@@ -77,12 +77,12 @@ the buffer system doesnt work in that version
 				d.bug()._warning(" pay attention if this trace appears something goes wrong but will not cause " + 
 						"bug " + 
 						"to point out a bug " +						 
-						"* list \n" ,this);
+						"* list \n" );
 			
 				
-				d.bug()._trace(	"juste want trace some value or execution scope"	 ,this);
+				d.bug()._trace(	"juste want trace some value or execution scope");
 				d.bug()._trace(	"trace you are bored to see and you need juste\r\n when something" + 
-								"goes wrong"	 ,this);
+								"goes wrong"	);
 				
 							
 				if(d.bug().getViewDebug() != null)
@@ -90,7 +90,7 @@ the buffer system doesnt work in that version
 					d.bug().getViewDebug().setBugColor("0022FF");
 				}
 				
-				d.bug()._bug(" Now bug color have changed" ,this);
+				d.bug()._bug(" Now bug color have changed" );
 				
 								
 			}
