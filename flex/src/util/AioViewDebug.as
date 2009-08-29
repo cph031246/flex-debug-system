@@ -47,13 +47,13 @@ package util
 		private var m_comment			:String					= "";
 		private var m_bugColor			:String					= "FF0000";
 		private var m_warningColor		:String					= "00FF00";
-		private var m_classColor		:String				= "C10076";
-		private var m_methodColor		:String				= "A2FB04";
-		private var m_bTextAreaCreated	:Boolean			= false;
-		private var m_bPanelCreated 	:Boolean			= false;
-		private var m_bMusBeDeleted 	:Boolean			= true;
+		private var m_classColor		:String					= "C10076";
+		private var m_methodColor		:String					= "A2FB04";
+		private var m_bTextAreaCreated	:Boolean				= false;
+		private var m_bPanelCreated 	:Boolean				= false;
+		private var m_bMusBeDeleted 	:Boolean				= true;
 		
-		private var m_buttonErase		:Button				= null;
+		private var m_buttonErase		:Button					= null;
 	
 		private var m_textInputCommand 	:TextInput			= null;
 		private var m_buttonSend		:Button				= null;
