@@ -205,7 +205,7 @@ package util
 		{
 			if(m_bTextAreaCreated == true && m_bPanelCreated == true)
 			{
-				m_textArea.x = 0;
+				m_textArea.x = 10;
 				m_textArea.y = 0;
 				m_textArea.width = m_viewPanel.width - m_margin;
 				m_textArea.height = m_viewPanel.height - 60 - m_buttonErase.height;
@@ -223,7 +223,8 @@ package util
 				 	m_silent 				== 	false)
 			{
 				var className:String = ""; 
-				className 	=	AioDebugUtil.getCallerClass(4);
+				
+				className 	=	AioDebugUtil.getCallerClass(1);
 				className 	=  	className.split(".")[1];
 				//do the test here before poluate classe name with html
 				//if some class have been excluded from trace				
@@ -236,17 +237,19 @@ package util
 						
 						var methodeName:String = "";
 						//fixme number of level
-						methodeName = AioDebugUtil.getSimpleCallerMethod(4);
+						methodeName = AioDebugUtil.getSimpleCallerMethod(1);
 					
 						var htmlClassName:String = "";
 						var htmlMethodeName:String = "";
+						var prefix:String = "";
+						
 						htmlClassName = "<font color=\"#"+m_classColor+"\">"+ className +"</font>";
 						htmlMethodeName = "<font color=\"#"+m_methodColor+"\">"+methodeName+"</font>";
 						if(m_prefix.length > 0)
 						{
-							m_prefix = m_prefix + " : ";
+							prefix = m_prefix + " : ";
 						}
-						str = 	"<b>" + m_prefix + packageName +"::"+ htmlClassName+ "." + methodeName + "</b>"+ m_br
+						str = 	"<b>" + prefix + packageName +"::"+ htmlClassName+ "." + methodeName + "</b>"+ m_br
 								+ m_comment + str;
 					}
 					if( isWindowInCorrectState() == true)		//if silent shut down debug traces
